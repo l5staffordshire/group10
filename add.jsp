@@ -6,15 +6,22 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%= request.getParameter("firstname")
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>add</title>
+        <title>add page</title>
     </head>
     
-    <body>
+    <body bgcolor="#E6E6FA">
+    
+    <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+        <%=session.getAttribute("firstname")%>
+    </div>
         
-        <table style="width:100%">
+    <table>
     <tr>
     <th>id</th>
     <th>first name</th> 
@@ -32,8 +39,10 @@
     <th>gender</th>
     
    </tr>
+   <form action="show.jsp" method="post"
    <tr>
-    <th><input type="number" name="id" id="id" /><br /><br /></th>
+   
+    <th><input type="number" name="id" id="idb" /><br /><br /></th>
     <th><input type="text" name="firstname" id="firstname" /><br /><br /></th> 
     <th><input type="text" name="lastname" id="lastname" /><br /><br /></th>
     <th><input type="text" name="othernames" id="othernames" /><br /><br /></th>
@@ -46,12 +55,12 @@
     <th><input type="email" name="email" id="email" /><br /><br /></th>
     <th><input type="text" name="position" id="position" /><br /><br /></th>
     <th><input type="text" name="ranking" id="ranking" /><br /><br /></th>  
-    <th><input type="checkbox" name="gender1" value="male"> male<br>
+    <th>><input type="checkbox" name="gender1" value="male"> male<br>
         <input type="checkbox" name="gender2" value="female"> female</th>
    </tr>
-        </table>
+            </table>
+    
         
-        <form action="C:\Users\IDDI\Documents\NetBeansProjects\HRSYS\web\index.jsp" method="get">
     <input type="submit" value="save" 
            name="save" id="save_button"/>
         </form>

@@ -1,18 +1,20 @@
 <%@page contentType="text/html"%>
 <%@page pageEncoding="UTF-8"%>
 
-<jsp:forward page="Welcome.do"/>
+
 
 <html>
     
-    <body>
-        
-        <form action="C:\Users\IDDI\Documents\NetBeansProjects\HRSYS\web\edit.jsp" method="get">
+    <body bgcolor="#E6E6FA">
+        <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+        <%=session.getAttribute("firstname")%>
+    </div>
+        <form action="edit.jsp" method="get">
     <input type="submit" value="edit" 
            name="edit" id="edit_button"/>
         </form>
         
-        <form action="C:\Users\IDDI\Documents\NetBeansProjects\HRSYS\web\add.jsp" method="get">
+        <form action="add.jsp" method="get">
     <input type="submit" value="add" 
            name="add" id="add_button"/>
         </form>

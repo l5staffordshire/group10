@@ -9,9 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>edit page</title>
+        <title>add page</title>
     </head>
-    <body>     
+    <body bgcolor="#E6E6FA">
+        
+        <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+        <%=session.getAttribute("firstname")%>
+    </div>
                 
         <table style="width:100%">
     <tr>
@@ -31,8 +35,10 @@
     <th>gender</th>
     
    </tr>
+   
    <tr>
-    <th><input type="number" name="id" id="id" /><br /><br /></th>
+    <form action="" method="post"
+    <th><input type="number" name="id" id="idb" /><br /><br /></th>
     <th><input type="text" name="firstname" id="firstname" /><br /><br /></th> 
     <th><input type="text" name="lastname" id="lastname" /><br /><br /></th>
     <th><input type="text" name="othernames" id="othernames" /><br /><br /></th>
@@ -51,9 +57,8 @@
         </table>
         
         
-        <form action="C:\Users\IDDI\Documents\NetBeansProjects\HRSYS\web\index.jsp" method="get">
-    <input type="submit" value="save" 
-           name="save" id="save_button"/>
+    <input type="submit" value="submit" 
+           name="submit" id="save_button"/>
         </form>
     </body>
 </html>
